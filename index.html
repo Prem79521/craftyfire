@@ -1,0 +1,996 @@
+<html><head><title>Ramayana</title>
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<style>@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400");
+
+    *,
+    *::before,
+    *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    /* ================= VARIABLE ================ */
+    :root {
+      --primary-color: hsl(9, 94%, 61%);
+      --primary-color-alt: hsl(28, 72%, 83%);
+      --second-color: #3e537c;
+      --second-color-alt: hsla(220, 33%, 36%, 65%);
+      --third-color: hsl(220, 36%, 28%);
+      --white-color: #fbfbfb;
+      --white-color-alt: hsl(12, 14%, 93%);
+      --dark-color: hsl(300, 100%, 0%);
+    }
+    
+    /* ================= BASE ==================== */
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .bx {
+      font-size: 2.5rem;
+    }
+    .container {
+      padding: 0 2rem;
+    }
+    
+    /* -- BODY -- */
+    body {
+      font-family: "Raleway", sans-serif;
+      font-size: 1rem;
+      background-color: var(--white-color);
+    }
+    
+    /* ================= HEADER ================ */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--dark-color);
+      padding: 1rem 2rem;
+    }
+    .Ram {
+      font-size: 2.5rem;
+      background: -webkit-linear-gradient(
+        120deg,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-items {
+      display: flex;
+    }
+    .nav-item {
+      margin: 0 2rem;
+    }
+    .nav-link {
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem;
+      position: relative;
+      background: -webkit-linear-gradient(
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-link::before {
+      content: "";
+      background: linear-gradient(var(--primary-color), var(--primary-color-alt));
+      width: 100%;
+      height: 0.05rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 150ms;
+    }
+    .nav-link:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .menu-toggle {
+      display: none;
+    }
+    .bx-menu,
+    .bx-x {
+      cursor: pointer;
+      background: -webkit-linear-gradient(
+        120deg,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: none !important;
+    }
+    
+    /* ================= MAIN ================ */
+    
+    /* -------- HOME SECTION -------------- */
+    .section-1 {
+      background-color: var(--dark-color);
+      display: grid;
+    }
+    /* .home-computer-container {} */
+    
+    .slogan .name {
+      background: -webkit-linear-gradient(
+        120deg,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .slogan .rama {
+      background: -webkit-linear-gradient(
+        120deg,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.8rem;
+    }
+    
+    /* -------- OFFER SECTION ------------- */
+    .section-2 {
+      margin: 2rem 0;
+    }
+    .offer {
+      background-color: var;
+      margin: 1rem 0;
+      display: grid;
+    }
+    .offer img {
+      background-color: var;
+      padding: 2rem 0;
+    }
+    .offer-1 img {
+      background-color: var;
+      padding: 3rem 0;
+    }
+    .offer-description {
+      background-color: var(--white-color-alt);
+      padding: 0 1rem;
+    }
+    .offer-description .offer-title {
+      color: var(--second-color);
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding: 1.5rem 0 0.5rem 0;
+    }
+    .offer-description .offer-hook {
+      color: var(--second-color-alt);
+      font-size: 1.2rem;
+    }
+    .offer-description .cart-btn {
+      cursor: pointer;
+      color: var(--second-color-alt);
+      font-size: 1.1rem;
+      display: grid;
+      place-items: center;
+      margin: 2rem 0 1rem 0;
+      width: 10rem;
+      height: 3rem;
+      background-image: linear-gradient(
+        to top,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+    }
+    .offer-description .cart-btn:hover {
+      background-image: linear-gradient(
+        to bottom,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+    }
+    
+    /* -------- PRODUCT SECTION ----------- */
+    .section-3 {
+      display: grid;
+      place-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    }
+    .product {
+      cursor: pointer;
+      background-color: var(--white-color-alt);
+      position: relative;
+    }
+    .product::before {
+      content: "";
+      background-image: linear-gradient(
+        to bottom,
+        hsla(29, 72%, 83%, 0.438),
+        hsla(9, 94%, 61%, 0.507)
+      );
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .product_add_cart {
+      color: var(--white-color-alt);
+      font-size: 1.2rem;
+      background-color: hsl(9, 94%, 65%);
+      padding: 1rem 0.4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 300ms, color 300ms, box-shadow 300ms;
+    }
+    .product_add_cart:hover {
+      color: var(--white-color);
+      box-shadow: 0 1rem 0 -0.5rem hsl(17, 79%, 65%, 0.7),
+        0 2rem 0 -1rem hsla(17, 79%, 65%, 0.65);
+    }
+    
+    /* -------- SPONSOR SECTION ----------- */
+    .section-4 {
+      margin: 4rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .sponsor img {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: opacity 300ms;
+    }
+    .sponsor img:hover {
+      /* filter: grayscale(0); */
+      opacity: 1;
+    }
+    
+    /* ========= SUBSCRIBE SECTION ========== */
+    .section-5 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .subscribe-input-label {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
+      color: var(--second-color);
+    }
+    input[type="text"] {
+      padding: 0 0.5rem;
+      font-size: 1.1rem;
+      width: 100%;
+      height: 3rem;
+      border: none;
+      background-color: hsl(220, 33%, 90%);
+      color: var(--second-color-alt);
+      transition: background-color 300ms;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      background-color: hsl(220, 33%, 95%);
+    }
+    input[type="text"]::placeholder {
+      color: var(--second-color-alt);
+    }
+    input[type="submit"] {
+      cursor: pointer;
+      background-image: linear-gradient(
+        to top,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      color: var(--white-color-alt);
+      margin: 1rem 0;
+      border: none;
+      width: 100%;
+      height: 3rem;
+      font-size: 1.2rem;
+      transition: color 300ms;
+    }
+    input[type="submit"]:hover {
+      background-image: linear-gradient(
+        to bottom,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      color: var(--white-color);
+    }
+    /* =============== FOOTER =============== */
+    .top-footer {
+      background-color: var(--second-color);
+      display: flex;
+      flex-direction: column;
+    }
+    .footer-title {
+      font-weight: 500;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+      background-image: -webkit-linear-gradient(
+        120deg,
+        var(--primary-color-alt),
+        var(--primary-color)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-items h3 {
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 1.1rem;
+      padding: 0.1rem 0;
+      color: var(--white-color-alt);
+    }
+    .footer-items h3:hover {
+      text-decoration: underline;
+    }
+    .footer-items h3:last-child {
+      padding-bottom: 2rem;
+    }
+    
+    .end-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--third-color);
+    }
+    .copyright {
+      color: var(--white-color-alt);
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .copyright b {
+      font-weight: inherit;
+      font-size: 0.9rem;
+    }
+    .designer {
+      color: hsla(0, 0%, 98%, 0.541);
+      padding-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .designer:hover {
+      text-decoration: underline;
+    }
+    
+    /* =============== MEDIA QUERIES ======= */
+    
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+      /* ================= HEADER ================ */
+      header {
+        padding: 0.5rem 1rem;
+      }
+      .navbar {
+        background-color: var(--dark-color);
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 500ms;
+      }
+      .show-navbar {
+        display: flex;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 300ms;
+      }
+      .nav-items {
+        display: flex;
+        flex-direction: column;
+      }
+      .nav-item {
+        margin: 0.5rem 0;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .bx-menu {
+        display: block !important;
+      }
+      .show-bx {
+        display: block !important;
+      }
+      .hide-bx {
+        display: none !important;
+      }
+    }
+    @media (min-width: 769px) {
+      header {
+        padding: 1rem 5rem;
+      }
+      /* ================= MAIN ================ */
+    
+      /* -------- HOME SECTION -------------- */
+      .section-1 {
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        padding: 10rem 5rem 0 5rem;
+      }
+      .slogan .company-title {
+        max-width: 30rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.5rem;
+      }
+      .slogan .company-slogan {
+        max-width: 20rem;
+        font-size: 1.3rem;
+      }
+      /* -------- OFFER SECTION ------------- */
+      .section-2 {
+        margin: 2rem 5rem;
+      }
+      .noti {
+        margin: 5rem 0;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-rows: auto auto;
+      }
+      .notifi-1 {
+        grid-template-areas: "offer-1-img offer-desc-1";
+      }
+      .offer-1 img {
+        background-color: var(--dark-color);
+        padding: 2rem 0;
+      }
+      .offer-2 {
+        grid-template-areas: "offer-desc-2 offer-2-img";
+      }
+      .offer-1-img {
+        grid-area: offer-1-img;
+      }
+      .offer-2-img {
+        grid-area: offer-2-img;
+      }
+      .offer-desc-1 {
+        grid-area: offer-desc-1;
+      }
+      .offer-desc-2 {
+        grid-area: offer-desc-2;
+      }
+      .offer-description .offer-title {
+        font-size: 1.9rem;
+        padding: 1.5rem 0 0.5rem 0;
+      }
+      .offer-description .offer-hook {
+        max-width: 30rem;
+      }
+      .offer-description {
+        background-color: var(--white-color-alt);
+        padding: 2rem 1rem;
+      }
+      .offer-description .offer-title {
+        padding: 0.5rem 0 1rem 0;
+      }
+      .offer-description .cart-btn {
+        margin: 2rem 0 0.5rem 0;
+      }
+      /* -------- PRODUCT SECTION ----------- */
+      .section-3 {
+        gap: 5rem;
+      }
+      .product::before {
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 300ms;
+      }
+      .product:hover::before {
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 300ms;
+      }
+      .product_add_cart {
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+      .product:hover .product_add_cart {
+        transform: translate(-50%, -50%) scaleY(1);
+        transform-origin: top;
+      }
+      /* -------- SPONSOR SECTION ----------- */
+      .section-4 {
+        margin: 5rem 0;
+      }
+      /* ========= SUBSCRIBE SECTION ========== */
+      .section-5 {
+        padding: 1rem 0;
+      }
+      .section-5 .subscribe-container {
+        display: flex;
+        align-items: center;
+      }
+      input[type="text"] {
+        padding: 0 1rem;
+        width: 15rem;
+      }
+      input[type="submit"] {
+        width: 10rem;
+      }
+      /* =============== FOOTER =============== */
+      .top-footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 8rem;
+        padding-top: 2rem;
+      }
+      .footer-title {
+        font-size: 1rem;
+        padding: 1rem 0;
+      }
+      .footer-items h3 {
+        font-size: 0.9rem;
+      }
+    
+      .end-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--third-color);
+      }
+      .copyright {
+        color: hsla(0, 0%, 98%, 0.747);
+        padding: 1rem 0;
+        font-size: 0.8rem;
+      }
+      .copyright b {
+        font-size: 0.7rem;
+      }
+      .designer {
+        color: hsla(0, 0%, 98%, 0.322);
+        font-size: 0.8rem;
+      }
+    }
+    </style>
+<script>
+    
+'use strict'
+
+const menuToggle = document.querySelector('.menu-toggle');
+const bxMenu = document.querySelector('.bx-menu');
+const bxX = document.querySelector('.bx-x');
+
+const navBar = document.querySelector('.navbar');
+
+// --- open menu ---
+
+bxMenu.addEventListener('click', (e)=> {
+    if(e.target.classList.contains('bx-menu')){
+        navBar.classList.add('show-navbar');
+        bxMenu.classList.add('hide-bx');
+        bxX.classList.add('show-bx');
+    }
+})
+
+// --- close menu ---
+
+bxX.addEventListener('click', (e)=> {
+    if(e.target.classList.contains('bx-x')){
+        navBar.classList.remove('show-navbar');
+        bxMenu.classList.remove('hide-bx');
+        bxX.classList.remove('show-bx');
+    }
+})
+
+var audio = audio1("https://www.mboxdrive.com/Crackers Fireworks Sound.mp3");
+
+audio.oncanplaythrough = function(){
+audio.play();
+}
+
+audio.loop = true;
+
+audio.onended = function(){
+audio.play();
+}
+
+
+</script>
+</head>
+
+
+<body >
+  <section id="Home">
+  <header>
+    <div class="Ram">Jai Siya Ram</div>
+    <nav class="navbar">
+      <ul class="nav-items">
+        
+        <li class="nav-item"><a href="#r1" class="nav-link">Balakanda</a></li>
+        <li class="nav-item"><a href="#r2" class="nav-link"> Ayodhya Kanda,</a></li>
+        <li class="nav-item"><a href="#r3" class="nav-link">Aranya Kanda</a></li>
+               <li class="nav-item"><a href="#r4" class="nav-link">Kishkindha Kanda</a></li>
+               <li class="nav-item"><a href="#r5" class="nav-link">Sundara Kanda</a></li>       <li class="nav-item"><a href="#r6" class="nav-link">Lanka Kanda</a></li>
+        <li class="nav-item"><a href="#r7" class="nav-link" >Uttar Kanda</a></li>
+        <li class="nav-item"><a href="#section-5" class="nav-link">Notifications</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">
+      <i class="bx bx-menu"></i>
+      <i class="bx bx-x"></i>
+    </div>
+  </header>
+  <main>
+    <!-- HOME SECTION -->
+    <section class="container section-1">
+      <div class="slogan">
+        <h1 class="name">The Ramayana</h1>
+        <h2 class="rama">
+          Here you will read about the 'Seven Kands of Ramayana'.
+        </h2>
+      </div>
+      <div class="home">
+        <img class="img1" src="https://i.pinimg.com/564x/b8/f2/ee/b8f2eedb5b44f1477e18a19166a02340.jpg
+" >
+      </div>
+      <br>
+      <br>
+      
+    </section>
+    <section id ="r1">
+      <center>
+        <img src="https://hindutempletalk.org/wp-content/uploads/2023/08/c1_20230823_21545713.jpeg"
+             style="width:700px;height:400px;">
+        <font size="25">
+          <h1>Balakanda</h1></font><font size="4" ><b>
+          <p>
+            
+
+Daśaratha was the King of Ayodhyā. He had three wives: Kausalyā, Kaikeyī, and Sumitrā. He did not have a son and in the desire to have a legal heir performs a fire sacrifice known as Putrīyā Iṣṭi. Meanwhile, the gods are petitioning to Brahmā and Viṣhṇu about Rāvaṇa, king of the rākṣasas who is terrorizing the universe. Thus Viṣhṇu had opted to be born into mortality to combat the demon Rāvaṇa. As a consequence, Rāma was first born to Kausalyā, Bharata was born to Kaikeyī, and Lakṣmaṇa and Śatrughna were born to Sumitrā.
+
+When Rāma was 16 years old, the rishi (sage) Viśvāmitra comes to the court of Daśaratha in search of help against demons who were disturbing sacrificial rites. He chooses Rāma, who is followed by Lakṣmaṇa, his constant companion throughout the story. Rāma and Lakṣmaṇa receive instructions and supernatural weapons from Viśvāmitra and proceed to destroy Tāṭakā and many other demons. Viśvāmitra also recounts much lore of the landscape, his own ancestors, and the ancestors of the princes.
+
+The party then decide to go to attend king Janaka's sacrifice in the kingdom of Mithilā, who has a bow that no one has been able to string. Janaka recounts the history of the famed bow, and informs them that whoever strings the bow will win the hand of his daughter Sītā, whom he had found in the earth when plowing a field. Rāma then proceeds to not only string the bow, but breaks it in the process. Rāma marries Sītā; the wedding is celebrated with great festivity in Mithilā and the marriage party returns to Ayodhyā.
+          </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <section id ="r2">
+         <center>
+        <img src="https://www.vyasaonline.com/wp-content/uploads/2017/11/india-vintage-calendar-print-hindu-god-ram-sita-laxman-bharat-with-khadaau-gngp9-4ce242bd2a4293791e051a7d19c62339.jpg"
+             style="width:700px;height:500px;">
+        <font size="25">
+          <h1>Ayodhya Kanda</h1></font><font size="4" ><b>
+          <p>
+            Sri Rama was ever receiving praises from the citizens of Ayodhya as well as learned people, including the ministers. The ageing King Dasaratha therefore decided to install him as his successor. Preparations were made for a grand and splendid inaugural ceremony.
+            <br>
+<br>
+Manthara poisons Kaikeyi’s mind
+<br>
+When the gods realised that the coronation was not going to serve their ends (for Lord Vishnu had incarnated as Sri Rama in order to put an end to Ravana who was a menace to both humans and gods), they approached Mother Sarasvati to obstruct the installation of Sri Rama. Mother Sarasvati perverted the mind and and speech organ of Manthara, the hump-backed maidservant of Kaikeyi. Kaikeyi was overjoyed to hear that Sri Rama would be crowned yuvraja the following day. But as Manthara addressed her, her mind slowly changed. Manthara made her believe that the inauguration would place her in an inferior position and that Bharata would be banished or killed. Consequently, she asked the king for the two boons he had once offered her: firstly, that Bharata should be installed as yuvraja, and secondly, that Sri Rama be banished to the forest for fourteen years. It is only much later that Kaikeyi regains normalcy, and deeply repents her actions.
+            <br>
+<br>
+The Banishment
+<br>
+The helpless king was shocked at Kaikeyi’s requests but was forced to give in. When Sri Rama discovered the cause of his father’s sorrow, he was not moved by the change in his own fortune but accepted his father’s reluctant decree with absolute calmness. He was joined by the angry Lakshmana and devoted Mother Sita who said, “The forest where you dwell is Ayodhya for me, and Ayodhya without you is a veritable hell for me.”
+
+Guha, a Nishada chieftain, met Sri Rama and paid homage to him. The Lord embraced him, but could not accept his hospitality as he was under the vow not to enter a town.The simple-minded boatman would not let Sri Rama enter his boat without his washing his feet. He had heard that the touch of the Lord’s foot had converted a stone into a beautiful woman – he did not want his means of livelihood turned into a woman!
+            <br>
+<br>
+Bharata rejects his Mother
+<br>
+Unable to bear the grief of separation, King Dasaratha passed away. Bharata returned from his uncle’s home and when he learnt about the tragic events, he railed against his scheming mother and refused to accept the kingdom. He at once set out to meet Sri Rama, determined to bring him back.
+            <br>
+<br>
+Bharata meets Sri Rama
+<br>
+Although Bharata tried in various ways to coerce Sri Rama to return to Ayodhya as king, the lord was insistent on keeping his promise. Bharata returned, carrying Sri Rama’s sandals which he placed on the throne. He ruled as Sri Rama’s regent from Nandigrama, a little village away from the city.
+                   </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <section id ="r3">
+             <center>
+        <img src="https://www.vyasaonline.com/wp-content/uploads/2017/11/Ravi_Varma-Ravana_Sita_Jathayu.jpg"
+             style="width:700px;height:500px;">
+        <font size="25">
+          <h1>Aranya Kanda</h1></font><font size="4" ><b>
+          <p>
+            Summary
+            <br>
+
+During their exile,Sri Rama, Sita and Lakshmana journeyed southward. They visited the hermitages of many great sages. After spending more than ten years, they settled at Panchavati in the Dandaka forest.
+<br>
+            <br>
+Shurpanakha
+<br>
+            
+A rakshasi woman, Surpanakha, the sister of Ravana, was captivated by the matchless beauty of Rama. She attempted to seduce him. But when she failed to win either of the two princes, she turned to attack Sita. Lakshmana cut off her nose and ears as a punishment. Hearing of this, her demon brother, Khara, organized an attack against the princes. Rama destroyed Khara and his huge army.
+
+In order to avenge her humiliation, Surpanakha approached Ravana. She well knew of his weakness for women, and the wily demoness described the bewitching beauty of Sita. Her intention to bring this beautiful  woman to him was foiled and she was mutilated. Ravana was aroused more by lust than by anger and he resolved to punish Sri Rama by capturing Sita.
+<br>
+            <br>
+Abduction of Sita
+<br>
+            
+Ravana elicited the aid of Maricha who assumed the form of a golden deer and enticed Sita. Entranced by the beauty of the deer, she pleaded with Rama to get her the deer. Leaving Sita under Lakshmana’s guard, he endlessly chased the deer. Unable to capture the deer, he shot a fatal arrow at it. With his last breath, Maricha called out the name of Lakshmana in the voice of Rama. When Sita heard the cry, she was afraid that his life was in danger. She insisted that Lakshmana rush to his aid. Lakshmana tried to assure her that Rama was invincible, and that it was best if he obeyed Rama’s orders to protect her. On the verge of hysterics, Sita insisted that it was not she but her lord who needed Lakshmana’s help. After drawing a protective circle round the cottage, he stipulated that she was not to go outside the circle.
+
+When Ravana found her alone and unprotected, he appeared in the guise of an ascetic requesting Sita’s hospitality. Unaware of his devious plan, Mother Sita left the protection of the circle, and was then forcibly carried away by Ravana. Jatayu, a giant vulture and friend of Rama, tried to rescue Sita, but was mortally wounded. Sita kept her presence of mind, and dropped her jewels among some monkeys.
+
+When Ravana reached Lanka, he kept her under guard in the Asoka Garden. Ravana used various means of persuasion to force her to accept him. Of course, Sita was eternally devoted to Rama and rebuffed his overtures.
+            <br>
+            <br>
+
+Search for Sita
+<br>
+            
+Rama and Lakshmana learnt about Sita’s abduction from Jatayu. Because of his devotion and service to Rama, Jatayu received liberation from Rama. The princes immediately set out in search of Sita. During their quest,  Rama  killed a demon Kabandha, thus liberating him from a curse. They also met the ascetic Shabari, who directed them towards Risymukha Hill where they would meet Sugriva and Hanuman.
+            </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <section id ="r4">
+         <center>
+        <img src="https://ministhysnair.files.wordpress.com/2017/07/img_1917.jpg?w=640"
+             style="width:700px;height:500px;">
+        <font size="25">
+          <h1>Kishkindha Kanda</h1></font><font size="4" ><b>
+          <p>
+                
+           Rama and Lakshmana meet Hanuman and Sugriva 
+            <br>
+Sugriva lived in Rishyamuka not long before Rama and Lakshmana reached there. The great vanara or monkey lived in exile in the mountain region because he was driven away from Kishkindha by his elder brother Vali and was also robbed of his wife. When Sugriva saw Rama and Lakshmana with arms, he thought that they were sent by his brother Vali to kill him and thus he moved away from the place and sent Hanuman in the guise of a hermit to know the purpose of visit of the two strangers. After hearing everything from Lakshmana, Hanuman thought that the two brothers can also help Sugriva to regain his kingdom and his wife from Vali and thus took them to Sugriva. 
+<br><br>
+Rama's Alliance with Sugriva 
+            <br>
+Rama and Lakshmana were guided by Hanuman to the place where Sugriva was present. Rama held conversation with the monkey chief Sugriva regarding the search and rescue of Sita and also the regaining of Sugriva's right to Kishkindha by defeating Vali. Thus, Hanuman prepared fire by rubbing two pieces of wood, and passing sun wise about it, Sugriva and Rama were sworn in as friends, and each promised to aid the other. They gazed at each other intently, and neither had his fill of seeing the other. After that, Sugriva told his story and requested Rama for his aid, and Rama engaged himself to overcome the brother of the monkey-chief, and in return Sugriva undertook to recover Sita from the demon Ravana. Sugriva also told Rama that he had seen Sita being carried away by the demon king Ravana of Lanka, and how she had dropped her veil and jewels, and he presented those things before Rama and Lakshmana. 
+<br><br>
+Rama kills Vali of Kishkindha
+            <br>
+After hearing the entire story of Sugriva and his misfortune, Rama fared with Sugriva to the city where Vali ruled, and overcame Vali , and put Sugriva on the throne of Kishkindha. After the establishment of Sugriva to the throne of Kishkindha and after the passing away of the four-month rainy season, Sugriva sent out his marshals to summon the monkey host who came from Himalaya and Vindhya and Kailas, from the east and from the west, from far and near, from caves and forests, in hundreds and thousands and millions, and each host was lead by a veteran leader. A large number of monkeys in the world assembled there, and stood in front of Sugriva with joined hands. Then Sugriva offered them to Lord Rama for his service, and would place them under his command. However, Rama believed it best that Sugriva should issue all commands, since he understood them well, and was well-informed of the matter to be accomplished. 
+<br>
+            <br>
+Search for Sita 
+            <br>
+The large army of monkeys under the leadership of Sugriva was ready for any type of combat. As yet, Rama, Lakshmana or Sugriva knew more about Ravana than his mere name. No one was able to tell where he dwelt or where he kept Sita. Thus, Sugriva dispatched that entire host under leaders to search the four quarters for a month, as far as the uttermost bound of any land where men or demons dwelt, or sun shone. But he trusted the great Hanuman more than any one, since the son of the wind-god had his father's energy and swiftness and vehemence and power of access to any place in earth or sky, and he was politic and brave and keen of wit and well-informed of conduct befitting the place and time. Therefore Rama also bestowed his trust in Hanuman, and gave him his signet-ring to show for a sign to Sita when he should discover her. 
+
+The search for Sita began vigorously and Rama waited for the news of Sita eagerly. After a month the hosts came back from searching the north and west and east, sorry and dejected that they had not found Sita. But the southern host searched all the woods and caves and hidden places, till at last they came to the mighty ocean, the home of Varuna, boundless, resounding, covered with dreadful waves. A month had passed and Sita was not found. Thus, the monkeys sat dejected, gazing over the sea and waiting for their end, for they dared not return to Sugriva. The monkeys got to know from Sampati , the brother of Jatayu, that Ravana lived in Lanka and he took away Sita with him. 
+           </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <section id ="r5"> <center>
+      <img src="https://qph.cf2.quoracdn.net/main-qimg-2922ab472d982841d25beb720ac6c7cc-lq"
+             style="width:700px;height:500px;"><font size="25" >
+           <h1>Sundara Kanda</h1></font><font size="4" ><b>
+          <p>
+            After learning about Sita, Hanuman assumes a gargantuan form and makes a colossal leap across the ocean to Lanka after defeating Surasa, the Mother of the Nagas and Sinhika, who is sent by the Asuras.
+
+Here, Hanuman explores the demon's city and spies on Ravana. He locates Sita in the Ashok Vatika, who is wooed and threatened by Ravana and his demon mistresses to marry Ravana. He reassures her, giving Rama's signet ring as a sign of good faith. He offers to carry Sita back to Rama, however she refuses, reluctant to allow herself to be rescued by any one, other than her husband. She says that Rama himself must come and avenge the insult of her abduction.
+
+Hanuman then wreaks havoc in Lanka by destroying trees and buildings, and killing Ravana's warriors. He allows himself to be captured and produced before Ravana. He gives a bold lecture to Ravana to release Sita. He is condemned and his tail is set on fire, but he escapes his bonds and, leaping from roof to roof, sets fire to Ravana's citadel and makes the giant leap back from the island. The joyous search party returns to Kishkindha with the news.
+
+                     </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li>
+    </section>
+    <section id ="r6"><center>
+      
+      <img src="https://ministhysnair.files.wordpress.com/2017/07/img_1917.jpg?w=640"
+             style="width:700px;height:500px;"><font size="25" >
+           <h1>Lanka Kanda</h1></font><font size="4" ><b>
+          <p>
+            
+             Jambavan asks the monkeys Nala and Nila to start work on constructing the bridge over the sea. Nila and Nala accordingly start constructing the bridge over the sea with the help of other monkeys. Ram remembers his chosen God, Lord Shiva and makes a decision to set up a shrine for Rameswaram. When completed, the army of Ram begins to cross the bridge and arrives at Lanka, taking camp on Mount Suvela. When Mandodari  hears of the advance of Ram’s army, she asks Ravan to return Sita to Ram as she fears for her husband’s life. Ravan’s son Prahasta also tries to reinforce his mothers sentiments, but  with no success. Rama fires a warning shot from his retreat in Suvela which strikes Ravan’s crown and royal umbrella. Mandodari for a second time tries to convince Ravan of handing Sita back to Ram. In the mean time Ram asks Jambavan what should be done. Jambavan suggests that they send Angada, as messenger, to give Ravan an opportunity to return Sita.<br> <br> 
+
+Angada in Ravana’s Court<br> 
+
+When Angada was on his way to the court, Ravana’s son spotted him and obstructed his path, hurling many insults on him. Ravana’s son thought Angad was the same vanar (monkey) who had set Lanka on fire. A quarrel broke out between them. All the Rakshas Rakshas ran away and gave the news to Ravan that the same monkey (Hanuman) had returned who had caused destruction in Lanka. Angad reaches the royal court of Ravan without much difficulty. On reaching court, Angad explains that he’s the messenger of Ram and son of Bali. He tells Ravan that he still has time to save himself from destruction. Angad tries his best to convince Ravan for submission in a peaceful manner. But Ravana was firm to face a battle instead of conceding his defeat. Angada then firmly plants his foot on the ground and threw a challenge that if anybody in Ravan’s court uprooted his foot; Ram would concede his defeat and return. All the mighty Rakshas commanders of Ravan’s army and even Meghanada tried their best to uproot Angad’s foot but none of them succeeded. Ravan orders his men to kill Angad. But before anybody could touch Angada, he escapes. Angad returns to Ram and narrated the whole story to him. All the Rakshas of Ravan present there (Prahadta, Durmukha, Vajradamshtra, Nikumbha and Vajrahanu) assure Ravan that they could individually kill Rama and his army within no time. Vibhishan requests Ravan to return Sita to Ram. Indrajit criticises Vibhishan for underestimating the former`s strength. Ravan refuses to hear the words of Vibhishan and rebukes him with harsh words. He tells Vibhishan that he is a weak person and that he was no longer needed. Vibhishan gets angry and leaves.<br> <br> 
+
+Vibhishan Requests For Refuge<br> 
+
+Vibhishan together with four of his companions reaches Ram’s place. Halting in the sky itself, Vibhishana asks Ram to give a refuge to him. Sugriv tells Ram that he could not trust Vibhishan the demon. Then Ram asks for opinion of the leaders in his group. Angada, sharabha, Jambavan and Mainda . They also express their apprehensions to accept Vibhishan. But Hanuman says that Vibhishan need not be doubted because he thought that Vibhishan understands the merits in Ram and demerits in Ravan. Hanuman further added that Vibhishan has approached Ram for refuge. Ram said that he could not desert Vibhishan who was seeking a refuge in him.<br> <br> 
+
+Ram Arrives in Lanka for Battle<br> 
+
+Agitated to know that Ram had arrived Lanka and is stationed at Suvela mountain along with his army, Ravan approached Sita with Vidyujjuha, known for conjuring tricks. He informed Sita that her husband along with his army had been killed in battle, he produced before her, Ram’s head along with bow and arrows created with Vidyujjuha’s conjuring trick. Sita was shocked, fell unconscious at the sight of Ram’s head and bow. She regained consciousness and asked Ravan to kill her also, so that she would join her husband in heaven. In the mean time, Ravan was abruptly called away by an emissary and after consultation with his ministers, prepared his army for action against the forces of Ram. A Rakshasny named Saram assured Sita that Ram was still alive.<br>  
+
+Ram, Sugriv, Hanuman and others were deliberating on the ways and means for the success of their mission, Vibhishan informed that his spies had returned after gathering the required information about Ravan’s arrangements at the four gates of theist. After hearing Vibhishan’s information, Ram ordered Nila, Angad, Hanuman and others to storm the four gates and decided to stay on Suvela mountain with his army. The Rakshas broke the news to Ravan about Lanka having been laid siege to by the monkeys. Ravan surveyed the innumerable troops of monkeys, occupying the entire city of Lanka. Meanwhile, Ram ordered to the monkeys to destroy the enemies forthwith. The monkeys started demolishing various important defensive structures of the city of Lanka and besiege all the city-gates. Ravan also commanded his army to commence combat. Rakshas begin to strike the monkeys with their weapons and the monkeys responded the strike with trees, mountain-tops, nails and teeth.<br> 
+
+On the first day of his battle with Ram’s army, Indrajit, Ravan’s son used all his force to cast havoc on the armies of Sugriva. At this Lakshman appeared before him, and fought a fierce battle with Indrajit, When Indrajit realised that Lakshman could not be won over, he started using his supreme magical powers, darting across the clouds and skies like a bolt of lightning. He combined his skills of sorcery and deceptive warfare, repeatedly vanishing and reappearing. Indrajit used his fiercest and deadliest weapon, Shakti. Lakshman fell unconscious, poised to die precisely at the following sunrise.<br> <br> 
+
+ Hanuman Brings Sanjeevani to Save Laksman<br> 
+
+Hanuman was asked to bring the physician of Lanka called Sushena. Sushena told Ram that there existed a herb called Sanjivani which could only be found in the Himalayan mountains. It was the only hope to save Laksmana. Hanuman was sent to bring the Sanjivani from Dunagiri mountain in the Himalayas, to revive Laksman. When Ravan came to know all about this, he instructed Kalnemi, the demon to block the path of Hanuman. Kalnemi replied that he cannot block the path of such a mighty being who had single handedly burnt Lanka. Why don’t you compromise with Sri Ram?” Ravan became furious. Kalnemi thought that it would be better to die at the hands of the messenger of Sri Ram, than to die facing the wrath of Ravan.<br> 
+
+Kalnemi then created a beautiful temple and a pond with his illusionary powers. When Hanuman saw the temple and the pond, he decided to take some rest. Hanuman went to Kalnemi and greeted him. Kalnemi praised Ram and said-
+“A battle is being fought between Ram and Ravan. I can foresee Ram’s victory.”<br> 
+
+Hanuman was pleased. He asked for some water, as he was very thirsty. Kalnemi gave some water from his Kamandal. But Hanuman’s thirst was not quenched. He asked for some more. Kalnemi then showed him the pond. As soon as Hanuman entered the pond, a crocodile got hold of his legs but Hanuman killed the crocodile in no time. The crocodile was in fact an elf that had become a crocodile because of a curse. She revealed the real identity of Kalnemi. Hanuman then killed Kalnemi.<br> 
+
+Ravan, on learning that Kalnemi had been killed by Hanuman, summoned Surya (Sun) to rise before its appointed time because the physician Sushena had said that Lakshman would die if untreated by daybreak. Hanuman realised the danger, and becoming many times his normal size, detained the Sun God to prevent the break of day. He then resumed his search for the precious herb Sanjivani, but, found himself unable to identify which herb it was, he lifted the entire mountain.<br> 
+
+Hanuman made good speed towards Lanka, suddenly he was shot by an arrow as he approached Nandigram. Hanuman was mistaken to be a demon by Bharat. Hanuman fell to the ground together with the great hill. Hanuman regained consciousness and recognised Bharat is Ram’s brother and explained to Bharata that he was moving the mountain to save his own brother, Lakshman. Bharat, felt very sorry, offered to fire an arrow to Lanka, which Hanuman could ride in order to reach his destination more easily. But Hanuman declined the offer, preferring to fly on his own and he continued his journey with his injured leg. He continued on to Lanka and delivered it to the battlefield in Lanka. Sushena then identified and administered the herb, and Lakshman was saved. Ram embraced Hanuman, declaring him as dear to him as his own brother. Hanuman released Surya from his grip, and asked forgiveness, as the Sun was also his Guru.<br> <br> 
+
+ Kumbhakarna<br> 
+
+Ravan got the news of Laksman’s recovery and decided to awaken his sleeping brother Kumbhakarn, and requested him to come. Kumbhakarn saw his worried brother. Kumbhakarna asked Ravana about the nature of work to be done by him and whether he had to kill anyone. Ravan replied that Ram had come with troops of monkeys after crossing the ocean by a bridge, to wage a battle. Kumbhakarn, first accused Ravan of his unworthy act but assured him that he would neutralise that dishonour by killing the enemies. Ravan asked him to proceed to the battle-front. Then, Kumbhakarn reassured and promised Ravan, saying that he would kill Ram in battle. Ravan got pleased and ordered Kumbhakarn to wipe off the monkeys together with Ram and Lakshman in battle. Vibhishan apprised Ram about Kumbhakarn and narrated his story of his getting curse from Brahma that Kumbhakarn would keep sleeping for every six months and then waking up for a day in a year Hanuman striked Kumbhakarn with a large mountain-peak and injured him severely. In reply, Kumbhakarn striked on Hanuman’s chest with his spike. Then, Kumbhakarn striked other monkey-chiefs who attacked him. When Angada, the leader of the monkeys, attacked Kumbhakarn, the latter striked Angada violently and Angada fell unconscious. Then, Kumbhakarn began his attack on Sugriv. When Kumbhakarn threw his spike towards Sugriv in retaliation, Hanuman stopped it on the way and broke it off. Kumbhakarn thereafter took his hammer and began to attack the monkeys and bears. Lakshman started to attack Kumbhakarn with his arrows. But, Kumbhakarn appreciated the velour of Lakshman and proceeded towards Ram to fight with him. Ram released some arrows with ‘Roundra’ spell towards Kumbhakarn. Those arrows disappeared into Kumbhakarn’s chest and made him weapon-less. In retaliation, Kumbhakarn hurled a mountain-peak towards Ram and even before the mountain-peak reached Ram, it was split up into pieces by the arrows released by Ram. Ram employed a great missile and chopped off one arm of Kumbhakarn. When Kumbhakarn with an uprooted tree in his arm, retaliated by running towards Ram, Ram with an arrow, presided over by Indra, hurled it on Kumbhakarn and chopped off his second arm, Ram then chopped off the feet of Kumbhakarn with his arrows and finally slashed off his head.<br> 
+
+Hearing the news of Kumbhakarna killed by Ram, Ravana thought that he had virtually lost his right arm. As Ravan was mourning for the death of Kumbhakarn, Trishira (one of Ravan’s sons) consoled him and said that he would go to the battle-field and kill Ram. Hearing the words of Trishira, Ravan’s other sons (Devantaka, Narantaka and Atikaya) also came forward to join the fight. Then Ravan sent all them to the battle. He also sent Mahodara and Mahaparshva, his brothers to guard his sons. Mighty Rakshas accompanied them. The monkeys took huge rocks and trees to fight with the Rakshas. Seeing several Rakshas being killed in battle, Narantaka entered the field with his javelin and killed several monkeys. Narantaka hurled his javelin towards Angada’s chest, but the javelin broke and fell down. Angada striked Narantaka’s horse with his hand and the horse fell down dead. Then, Angada and Narantaka exchanged the blows on each other in battle and finally, Narantaka died.<br> 
+
+Mahiravana (Ahiravan)<br> <br> 
+
+In another incident during the war, Rama and Lakshmana were captured by the rakshas Mahiravana (or Ahiravan), brother of Ravana, who held them captive in their palace in Patala (or Patalpuri)–the netherworld. Mahiravana kept them as offerings to his deity. Searching for them, Hanuman reached Patala, the gates of which were guarded by a young creature called Makardhwaja (known also as Makar-Dhwaja or Magar Dhwaja), who was part reptile and part Vanara.<br> 
+
+The story of Makardhwaja’s birth is said to be that when Hanuman extinguished his burning tail in the ocean, a drop of his sweat fell into the waters, eventually becoming Makardhwaja, who perceived Hanuman as his father. When Hanuman introduced himself to Makardhwaja, the latter asked his blessings, but fought him to fulfill the task of guarding the gate. Hanuman defeated and imprisoned him to gain entry. Upon entering Patala, Hanumana discovered that to kill Mahiravana, he must simultaneously extinguish five lamps burning in different directions. Hanuman assumed the Panchamukha or five-faced form of Sri Varaha facing north, Sri Narasimha facing south, Sri Garuda facing west, Sri Hayagriva facing the sky and his own facing the east, and blows out the lamps. Hanuman then rescued Ram and Lakshman. Afterwards, Ram asked Hanuman to crown Makardhwaja king of Patala. Hanumana then instructed Makardhwaja to rule Patala with justice and wisdom. When Ravana was informed that Atikaya, Dhumraksha, Akampana, Prahadta, Kumbhakarn and other mighty Rakshas had been killed in battle, felt anxious. He felt that no demon was capable of defeating Rama and Lakshmana.<br> <br> 
+
+Indrajit Meghanada<br> 
+
+Seeing Ravana, in distress Indrajit promised to kill Ram and Lakshman. He set out for the battle, accompanied by his army. After reaching the battle-field, Indrajit challenged Ram and Lakshma, he fought fiercely, and arrested both the brothers using his most nefarious weapon Nagapash (a trap made of million snakes). Both the brothers fell on the ground breathless. The monkeys along with Hanuman and Angada began to grieve, on beholding the plight of Ram and Lakshman..<br> 
+
+Meghanada informed Rakshas about his adventure of captivating both Ram and Lakshman by Nagapash his net work of serpentine arrows. Indrajit striked the other monkey-chiefs like . Nila, Mainda, Dvivida, Hanuman, Gavaksha and Angada as also Jambavan. Sugriv looked depressed on seeing the plight of Ram and Lakshman. Vibhishan also felt distressed on perceiving the bodies of Ram and Lakshman lying unconscious on the ground. Meanwhile, Garuda the King of Birds, who was also the enemy of the serpents and also the flying vehicle of Narayana made his appearance on the scene and liberated Ram and Lakshman from their bondage.<br> 
+
+Indrajit, informed Ravana that both Ram and Lakshmana had been killed. Ravana applauded his son for his daring act. Ravan summoned some Rakshasnies including Trijata and instructed them to take Sita in Pushpaka-plane to the battle-front and show Ram and Lakshman had been killed by Indrajit. Accordingly, the Rakshasnies took Sita in Pushpaka-plane and show her Ram and Lakshman lying unconscious on a bed of arrows in the battle-field. Imagining Ram and Lakshman had been dead, Sita bursted into sobs. However, Rakshany Trijata reassured her, stating good reasons for Ram and Lakshman to be still alive and cheering her up, took her back to Ashoka vatika.<br> 
+
+Ravana was surprised as to how Ram and Lakshman got released from the bind of arrows, made by Indrajit, his son. Ravan called Dhumraksha, a demon and asked him to go with an army and kill Ram, Lakshman and the monkeys Dhumraksha along with his army entered the western gate of Lanka where the army-chief Hanuman was stationed. A tumultuous battle ensued between the Rakshas and the monkeys. Both the monkeys and Rakshas were killed in large numbers. When Dhumraksha pounced on Hanuman, who in turn hitted him on his head and killed him <br> 
+
+Ravana sent Vajradamstra, another Rakshas to kill Ram, Sugriv and his monkeys. Vajradamstra and his army emerged from the southern gate where Angada, the General of the Monkeys was stationed. The monkeys had a tough fight with the Rakshas. Angada, the leader of the monkeys striked the terrible strong Rakshas, chopping off their heads. A fierce battle ensued between Vajradamshtra and Angada. Angada assaulted Vajradamshtra with a sword and his head fell on the ground. <br> 
+
+Indrajit, while himself remaining invisible in the sky, with a network of arrows, Indrajit created darkness in the sky and showers a multitude of arrows. Struck by the arrows discharged by Indrajit, monkeys in hundreds fell down dead. Placing an illusory live image of Sita in his chariot, Meghanada along with his army entered the battle-field. Hanuman with his army of monkeys march in front to face Indrajit in battle. While Hanuman and his army were watching, Indrajit pulled Sita by her hair and unsheathed his sword. Meghanada killed the illusory living image of Sita, with his sharp sword. <br> 
+
+Hanumana, with his army, approached Ram and informed him that Indrajit had killed Sita. Ram fainted upon hearing that news. The monkeys sprinkle water on Ram, so that he regains consciousness. Vibhishan told Ram the secret of conjuring trick practiced by Indrajit in killing an illusory image of Sita. Meghanada fought with Ram’s army for three days. On third day Indrajit went to his native deity’s secret temple to perform the yagna that would make him invincible. Vibhishan learned of his nephew Indrajit’s routine through his spies and suggested Ram to send Lakshman to kill Indrajit, even before Indrajit complete the sacrificial fire in the sanctuary of Nikumbhila. Ram then askd Lakshman to proceed with the armies of Sugriv, Hanuma, Jambavan and Vibhishan. Lakshman proceeded to Nikumbhila along with Hanuma, Vibhishan and Jambavan to kill Indrajit. Vibhishan took Lakshman to the place where indrajit was performing the sacrificial rite.Lakshman and Vibhisana took the opportunity to face Indrajit in the “Yagnaagaar”, where Indrajit would not touch any weapons. Hearing the terrible noise of the battle, Indrajit discontinued his sacrificial rite and entered the battle-field. Indrajit saw Vibhishan there and started talking harsh words to him, saying that he had ditched him by bringing Lakshman to that place. Vibhishan replied that because of Ravan’s vices, he had left him and joined Ram’s side. Meghanada fought Lakshman with the utensils of the yagna and even managed to escape from there. But before Indrajit could get armed Lakshman chopped his head off his body. Upon his death his wife Sulochana became Sati on his funeral pyre. <br> <br> 
+
+Ravan On Battle Field <br> 
+
+Ravana felt distressed in hearing the news of his son’s death. He got enraged and decided to kill Sita, who was the root of all this trouble. Ravana with a sword in his hand, walked towards Ashoka vatika to kill Sita. Sita observed Ravan rushing towards her and lamented that after killing Ram and Lakshman, he was coming to her place to kill her. Suparshva, a good and upright minister of Ravan advised Ravana to divert his anger towards Rama in battle. Ravan accepted the advice of his minister and returned to his assembly-hall. Ravan entered the battle-field and with his mystic missiles. Ram and Lakshman came and attacked Ravan. The battle between Ram and Ravan started. Indra sent a chariot, an armour, some arrows and a powerful spear. A tumultuous battle broke between Ram and Ravan. A spear hurled by Ravan was thwarted by a powerful spear (sent by Indra) of Ram. Then, Ram striked Ravan’s horses with arrows. He also pierced the chest region and the forehead of Ravan with his fierce arrows. Ravan got severely hurt. Ravan reproached the charioteer for having turned back his chariot away from the battle-field. The charioteer explained to Ravan, the various reasons as to why he had taken back the chariot. Satisfied with the explanation given by his charioteer, Ravan instructed him to take the chariot back to the battle-field. Thereupon, the charioteer brought the chariot in an instant before Ram on the battle-field.<br> <br> 
+
+Seeing Ravan’s chariot coming, Ram asked Matali the charioteer to be on his guard. A fierce battle ensued between Ram and Ravan. Ram and Ravan used Astras charged with Mantras. The fierce encounter continued for seven days. Ram and Ravan made full use of the boons of Siva and Brahma, and the magical knowledge of warfare. Ram and Ravan compete fiercely, inflicting severe injuries on one another with the most powerful weapons Ravan discharged on Ram, Nagastra (arrow that becomes serpents full of poison). The arrows had their mouths like serpents and vomit forth fire all around. The Ram discharged Garudastra. The arrows became Garudas and cut off the serpent arrows on all sides. Garudas were the enemies of serpents. After a long and arduous battle, Ram successfully decapitated Ravan’s central head, but an ugly head, symbolic of all of Ravan’s evil powers arose in its place. After another long battle, Ram decapitated it, only to find another growing in its place. This cycle continues, and as darkness approaches, Ravan’s magical powers increase in force. Vibhishan , seeing this then told Ram that Ravan had obtained amrita, the nectar of immortality, from the Gods. Though he could not consume it, he nevertheless stored a vessel of it in his stomach. This amrit was causing his heads to regenerate as soon as they were cut off. Upon the advice of Agastya, Ram worshiped Lord Aditya, the Sun, with the famous Aditya Hridayam prayer and then invoked the most powerful weapon, the Brahmastra. Ram fired the great arrow that entered Ravan’s chest/stomach and destroyed the store of amrit, finally killing him. Mandodari steered at the dead body of Ravana. She could not believe that Ravana, who had unconquerable powers had been killed by a mortal like Ram. But, she realised that Ram, who killed Ravan, was none other than Vishnu the lord of maintenance of the world. She admitted that Ravan had done a sinful deed in abducting Sita and that he had faced the consequence in the form of his death in the hands of Rama. <br> <br> 
+
+Following Ravana’s death, Vibhishan was crowned the king of Lanka. Rama asked the new king (Vibhishan) and the surviving rakshasas to properly cremate their dead king, who was a great being worthy of respect and admiration. Initially, Vibhishana refused to perform the last rites, but when Rama convinced him, he began to perform the funeral of Ravana. <br> <br> 
+
+Sita’s Agnipariksha<br> 
+
+After Ram killed Ravan and won the war, Sita wanted to come before him in the state which over a year’s imprisonment had reduced her to, Ram arranged for Sita to be bathed and given beautiful garments before they were re-united. But even as Sita came before him in great excitement and happiness, Ram does not look at her, staring fixedly at the ground. He told her that he had fought the war only to avenge the dishonour that Ravan had inflicted on Raghuvnamsa and Sita. At this sudden turn of events, all the vanaras, rakshadas, Sugriv, Hanuman and Lakshman were deeply shocked. Sita begged Lakshman to build her a pyre upon which she could end her life, as she could not live without Ram. At this point, Lakshman was angered at Ram but following Ram’s nod, he built a pyre for Sita. At the great shock and sorrow of the watchers, Sita walked into the sacrificial fire, Agni the lord of fire raised Sita, unharmed, to the throne, attesting to her purity. Immediately Ram ran to Sita and embraced her. He had never doubted her purity for a second, but, as he explained to Sita, the people of the world would not had accepted or honoured her as a queen or a woman if she had not passed this Agni pariksha before the eyes of hundreds, where Agni would destroy the impure and sinful, but not touch the pure and innocent. There was a version of Tulsidas’s Ramcharitamanasa, which was popular, which stated that Ram had Sita under the protection of Agni God. After Sita was released it was necessary to bring her out of security of Agni God. Another version of this was that Ram had known Sita was going to be abducted by Ravan ahead of time. So, he entrusted her to Agni Dev. Ram did this so that he, who in reality was Vishnu, could kill Ravan. Sita, in turn, left behind a “shadow”, or twin-like version of herself behind. The “shadow” Sita had been abducted by Ravan. Therefore, the lila of Agni Pariksha was to retrieve the genuine Sita from the temporary covered of Agni Dev. Ram explained this to Lakshman before the “Pariksha” was done. This version had also been written in the Ram Charit Manas. Ram’s seeing Pushpaka, the divine aircraft, and returning to Ayodhya in that aircraft, Ram showed to Sita, the whole City of Lanka, the battle-field where Ravan and other Rakshas were killed, Nala-Setu the bridge which was built across the ocean, Mount Mainka, Setu-bandha (where the construction of the bridge was started), Mount Rwashyamuka, Pampa River, Janasthana-forest, Panchavati, Godavari river, the hermitage of Rishi-Agastya, the hermitage of Atri and Anasuya, Mount Chitrakuta, Yamuna-river, the hermitage of Bharadwaj, Ganga-river, Sarayu-river . Ram met Rishi Bharadvaja on his way back. Ram had also sent Hanuman to Yodhya to inform Bharat.<br> <br> 
+
+It was now the day before Ram was to return to Ayodhya after serving his exile. Bharat was anxious that his brother still hadn’t arrived.. Hanuman met Bharat told him of the arrival of Ram, Sita and Laksman. Bharat, after hearing the good news from Hanuman called Shatrughna and asked him to make appropriate arrangements for the reception of Ram in the City of Ayodhya. Bharat departed with all others, for Nandigram to receive Ram. The Pushpak Viman landed at Nandigram. Bharat welcomed Ram and others, by embracing them and by greeting them joyously. Ram too offered his salutations to all his mothers, who came to receive him. Then, Bharat brought Ram’s wooden sandals and placed them below the feet of Ram. Ram, Sita and Laksman collectively touched the feet of the Rishi Vaswashta on arriving in Ayodhya and thereafter greet all that had gathered in the assembly. Ram’s coronation took place and he was finally crowned king of Ayodhya. Shortly after Ram was crowned King of Ayodhya, Ram decided to ceremoniously reward all his well-wishers. At a grand ceremony in his court, all his friends and allies took turn being honoured at the throne. Hanuman approached without desiring a reward. Seeing Hanuman came up to him, an emotionally overwhelmed Ram embraced him warmly, declaring that he could never adequately honour or repay Hanuman for the help and services he received from the noble Vanara. Sita, however, insisted that Hanuman deserved honour more than anyone else, and Sita gave him a necklace of precious stones adorning her neck. When he received it, Hanumana immediately took it apart, and peered into each stone. Taken aback, many of those present demanded to know why he was destroying the precious gift. Hanuman answered that he was looking into the stones to make sure that Ram and Sita were in them, because if they were not, the necklace was of no value to him. At this, a few mocked Hanuman, saying his reverence and love for Rama and Sita could not possibly be as deep as he implied. In response, Hanumana teared his chest open, and everyone was stunned to see Rama and Sita literally in his heart.
+                     </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <section id ="r7"> <center><font size="25" >
+      <img src="https://ministhysnair.files.wordpress.com/2017/07/img_1917.jpg?w=640"
+             style="width:700px;height:500px;">
+           <h1>Aranya Kanda</h1></font><font size="4" ><b>
+          <p>
+            Rama Returns to Ayodhya 
+            <br>  
+With the rising Sun, Rama taking the car Pushpaka, which was given to him by Vibhishana, stood ready to depart. Self-moving was that car, and it was very fairly painted and large; two stories it had, and windows and flags and banners and many chambers, and it also gave a melodious sound as it coursed along the airy way. Then Vibhishana asked Rama if he could do anything else for him and Rama then told him to content the monkeys and bears who have accomplished his affair with jewels and wealth, so that they could fare to their homes. He also advised him to rule as a righteous, self-controlled, and compassionate and a just collector of revenues, so that all may be attached to him. Vibhishana bestowed wealth on all the host, and Rama was taking leave of all the bears and monkeys and of Vibhishana and at that time all of them cried out in a single voice that they also would like to go with him to Ayodhya. Thus, Rama invited them gladly, and Sugriva and Vibhishana and the entire host mounted the mighty car; and the car rose up into the sky, drawn by golden geese, and sailed on its airy way, while the monkeys, bears, and rakshasas took their ease. 
+<br> <br> 
+Reign of Lord Rama 
+            <br> 
+Rama reached the kingdom of Ayodhya along with Lakshmana, Sita, Hanuman, Sugriva, Vibhishana and the host of monkeys and bears. After he reached his kingdom, Bharata restored the kingdom to his brother. Then skilful barbers came, and Rama and Lakshmana bathed and were shorn of their matted locks and dressed in shining robes; and Dasharatha's queens attended Sita and decked her in splendid jewels, while Kaushalya decked the wives of the monkeys, and the priests gave orders for the coronation. <br> 
+
+Rama mounted a car driven by Bharata, and Shatrughna held the umbrella, and Lakshmana waved a chowry and Vibhishana another. Sugriva rode on an elephant, and the other monkeys followed him riding on elephants to the number of nine thousand, and with music and the noise of conchs the lord of men entered their own city. Four golden jars were given to Hanuman and Jambavan and Vegadarshi and Rishabha to fetch pure water from the four oceans, and they rose into the sky and brought the holy water from the utmost bounds of ocean, north and south and east and west. Then Vashishta, setting Rama and Sita upon their golden throne, sprinkled that first of men and consecrated him as king of Ayodhya. <br> 
+
+Then, while Rama adorned the throne of Ayodhya, all the great hermits came to visit him who had regained his kingdom. They came from east and west and north and south, led by Agastya, and Rama worshipped them and appointed for them splendid seats of sacrificial grass and gold-embroidered deer-skin. Then the sages praised the fortune of Rama, especially inasmuch as he had slain the sons of Ravana, mightier than Ravana himself, and had delivered men and gods from fear. <br> <br> 
+
+Hanuman is Rewarded 
+            <br> 
+The monkeys stayed in the kingdom of Ayodhya more than a month, feasting on honey and well-cooked fruits and meats and roots, though it seemed to them but a moment, because of their devotion toward Rama. The time then came for them to go to their own city, and Rama embraced every one with affection and gave them goodly gifts. But Hanuman bowed and begged this boon, that he might ever be devoted to Rama alone, and that he might live on earth so long as the story of the deeds of Rama was told of amongst men. Hearing this request from Hanuman, Rama granted it and took from his own neck a jeweled chain and put it upon Hanuman. One by one the monkeys came and touched the feet of Rama, and then went their way; but they wept for sorrow of leaving him. <br> <br> 
+
+Ordeal of Sita 
+            <br> 
+Then Rama governed Ayodhya for ten thousand years; and the news once came out that Sita had conceived. Then Rama asked her if she had any longing, and she replied that she would like to visit the hermitages of the sages by the River Ganga. Rama thus granted her wish and the visit was scheduled for the next day. That very night Rama came to know from his ministers that his subjects were happy since he killed Ravana but were somewhat not pleased for he brought back Sita with him who stayed for long in the house of a different person other than her husband. At this, Rama got utterly shocked and ordered his brothers and told Lakshmana to leave Sita in the jungle and return to Ayodhya. Lakshmana thus left Sita in the hermitage of Valmiki and returned to Ayodhya. <br> <br> 
+
+Lava and Kusha <br> 
+Rama ruled his kingdom well and by that time Sita, dwelling at the hermitage of Valmiki, gave birth to two sons, and they were named Kusha and Lava; and they grew up in the forest hermitage, and Valmiki trained them with great wisdom, and he made the book of Ramayana in slokas, and gave them skill in recitation. <br> <br> 
+
+Sita taken home by Earth <br> 
+After Rama came to know that Lava and Kusha were his sons and that Sita was living in the hermitage of Valmiki, he send message to the saint enquiring about Sita. Rama asked if Sita would like to return to Ayodhya. Then Valmiki accompanied Sita to Ayodhya and then Rama again asked Sita to prove her faithfulness towards him again. With this Sita prayed to Vasundhara to accept her since he was ever faithful to Rama. Thus a heavenly throne rose up from within the earth, borne on the heads of mighty nagas, decked in shining jewels; and the Earth stretched out her arms and welcomed Sita and placed her on the throne, and the throne sank down again. <br> <br> 
+
+Last Days of Rama <br> 
+Rama became heavy-hearted with the disappearance of Sita inside the earth before his very eyes, and the whole world seemed empty without her. He presented the monkeys and the kings and hermits gifts, and sent them back to their own homes, and he made Sita's golden image to share with him in the performance of sacred rites, and a thousand years passed, while all things prospered in the kingdom of Ayodhya. Then Kaushalya and Kaikeyi died, and were united with King Dasaratha in the Heaven. Bharata reigned in Kekaya, and Shatrughna was king of Madhu, while the sons of Lakshmana founded kingdoms of their own. Once came a yogi who called himself Time and told Rama that he was the avatar or incarnation of Lord Vishnu and that he had accomplished his goal by killing Ravana and reigning in the earth for eleven thousand years. Then he advised Rama that the time has come for his return to heaven. Rama accepted his advice and along with his brothers and several rakshasas and monkeys he went to the river Sarayu, from where Rama reached the heaven. 
+                     </p></font>
+        <li><a href="#Home" class="nav-link">Home</a>
+   
+        </li></center>
+    </section>
+    <!-- OFFER SECTION -->
+    <section class="container section-2">
+      <!-- offer 1 -->
+      <div class="noti notifi-1">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/k/l/n/small-jai-shree-ram-hd-wallpaper-jaishreeram1-ntees-original-imagmxkh26ngjx9j.jpeg?q=20&crop=false" alt="a computer in dark with with white shadow" class="offer-img offer-1-img">
+        <div class="offer-description offer-desc-1">
+          
+
+    <!-- SUBSCRIBE SECTION-->
+    <section id="section-5"
+             class="container section-5">
+      <h2 class="subscribe-input-label">For notifications</h2>
+      <div class="subscribe-container">
+        <input type="text" id="email-subscribe" placeholder="Email address...">
+        <input type="submit" value="SUBSCRIBE">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container top-footer">
+      <!-- footer item 1 -->
+      <div class="footer-item">
+        <h2 class="footer-title">Jai Siya Ram</h2>
+        <div class="footer-items">
+       <h3></h3>
+          <h3></h3>
+          <h3></h3>
+        </div>
+      </div>
+      <!-- footer item 2 -->
+      <div class="footer-item">
+        <h2 class="footer-title">Jai Shree Ram</h2>
+        <div class="footer-items">
+           <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+        </div>
+      </div>
+      <!-- footer item 3 -->
+      <div class="footer-item">
+        <h2 class="footer-title">Pavan Puta Hanuman Ki Jay!</h2>
+        <div class="footer-items">
+           <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+        </div>
+      </div>
+      <!-- footer item 4 -->
+      <div class="footer-item">
+        <h2 class="footer-title">Siya Var Ram-Chandra ki Jai!</h2>
+        <div class="footer-items">
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+    <div class="container end-footer">
+      <div class="copyright"><b>Created By Prem vats Thakur</b></div>
+      <a class="designer" href="#"></a>
+    </div>
+  </footer>
+</body></html>
